@@ -10,24 +10,22 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Generated from protobuf message <code>udb.core.embedding.services.v1.BackfillRequest</code>
+ * Generated from protobuf message <code>udb.core.embedding.services.v1.CutoverModelAliasRequest</code>
  */
-class BackfillRequest extends \Google\Protobuf\Internal\Message
+class CutoverModelAliasRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string tenant_id = 1 [json_name = "tenantId"];</code>
      */
     protected $tenant_id = '';
     /**
-     * Generated from protobuf field <code>string source_name = 2 [json_name = "sourceName"];</code>
+     * Generated from protobuf field <code>string model_id = 2 [json_name = "modelId"];</code>
      */
-    protected $source_name = '';
+    protected $model_id = '';
     /**
-     * INCREMENTAL skips unchanged chunk hashes; FULL re-emits every chunk.
-     *
-     * Generated from protobuf field <code>string mode = 3 [json_name = "mode"];</code>
+     * Generated from protobuf field <code>string expected_collection = 3 [json_name = "expectedCollection"];</code>
      */
-    protected $mode = '';
+    protected $expected_collection = '';
 
     /**
      * Constructor.
@@ -36,9 +34,8 @@ class BackfillRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $tenant_id
-     *     @type string $source_name
-     *     @type string $mode
-     *           INCREMENTAL skips unchanged chunk hashes; FULL re-emits every chunk.
+     *     @type string $model_id
+     *     @type string $expected_collection
      * }
      */
     public function __construct($data = NULL) {
@@ -69,49 +66,45 @@ class BackfillRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string source_name = 2 [json_name = "sourceName"];</code>
+     * Generated from protobuf field <code>string model_id = 2 [json_name = "modelId"];</code>
      * @return string
      */
-    public function getSourceName()
+    public function getModelId()
     {
-        return $this->source_name;
+        return $this->model_id;
     }
 
     /**
-     * Generated from protobuf field <code>string source_name = 2 [json_name = "sourceName"];</code>
+     * Generated from protobuf field <code>string model_id = 2 [json_name = "modelId"];</code>
      * @param string $var
      * @return $this
      */
-    public function setSourceName($var)
+    public function setModelId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->source_name = $var;
+        $this->model_id = $var;
 
         return $this;
     }
 
     /**
-     * INCREMENTAL skips unchanged chunk hashes; FULL re-emits every chunk.
-     *
-     * Generated from protobuf field <code>string mode = 3 [json_name = "mode"];</code>
+     * Generated from protobuf field <code>string expected_collection = 3 [json_name = "expectedCollection"];</code>
      * @return string
      */
-    public function getMode()
+    public function getExpectedCollection()
     {
-        return $this->mode;
+        return $this->expected_collection;
     }
 
     /**
-     * INCREMENTAL skips unchanged chunk hashes; FULL re-emits every chunk.
-     *
-     * Generated from protobuf field <code>string mode = 3 [json_name = "mode"];</code>
+     * Generated from protobuf field <code>string expected_collection = 3 [json_name = "expectedCollection"];</code>
      * @param string $var
      * @return $this
      */
-    public function setMode($var)
+    public function setExpectedCollection($var)
     {
         GPBUtil::checkString($var, True);
-        $this->mode = $var;
+        $this->expected_collection = $var;
 
         return $this;
     }
